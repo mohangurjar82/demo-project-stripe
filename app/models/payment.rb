@@ -1,9 +1,6 @@
 class Payment < ApplicationRecord
 	DEFAULT_CURRENCY = 'usd'.freeze
   
-  
-  # def initialize(stripe_email, stripe_token, order_id, user)
-  # end
 
   def call(params, user)
     @stripe_email = params[:stripeEmail]

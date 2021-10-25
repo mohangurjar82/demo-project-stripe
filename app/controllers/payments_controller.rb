@@ -16,7 +16,11 @@ class PaymentsController < ApplicationController
   def create_checkout_session
    	session = Stripe::Checkout::Session.create({
 	    line_items: [
-	      {price: {{ PriceID }}, quantity: 2}
+	      {
+	      	# price:"price_1JnOB56opoSILlWC5WosnrvsxvwL",
+	      	price: '{{PRICE_ID}}',
+	       	quantity: 2
+	      }
 	    ],
 
 	    payment_method_types: [

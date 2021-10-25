@@ -32,6 +32,9 @@ Create a User, Order for checkouts page with fully payment page
 For pre-built checkout page
 
 1. rails s
-2. go to urls: "http://localhost:3000/checkouts"
+2. go to urls: "http://localhost:3000"
 3. In payment controller >> create_checkout_session >> set price id
-4. In config/secrets.yml file set your stripe's secret key and publishable key
+4. In config/secrets.yml file set your stripe's secret key and publishable key with Env variable 
+	a. stripe_secret_key
+	b. stripe_publishable_key
+
